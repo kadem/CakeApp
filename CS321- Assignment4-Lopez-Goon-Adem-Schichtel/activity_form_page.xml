@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android
+
+http://schemas.android.com/apk/res/android ">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_main"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/colorBackground"
+
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/FirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter first name: "
+            android:textSize="8pt"></TextView>
+
+        <EditText
+            android:id="@+id/EditFirstName"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:layout_width="fill_parent"></EditText>
+
+        <TextView
+            android:id="@+id/LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter last name: "
+            android:textSize="8pt"></TextView>
+
+        <EditText
+            android:id="@+id/EditLastName"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:layout_width="fill_parent"></EditText>
+
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:textSize="8pt"></TextView>
+
+        <EditText
+            android:id="@+id/EditEmail"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:layout_width="fill_parent"></EditText>
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Needed: "
+            android:textSize="8pt"></TextView>
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="309dp"
+            android:datePickerMode="calendar" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Needed: "
+            android:textSize="8pt"
+            android:padding="10dp"></TextView>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <TextView
+            android:id="@+id/icingSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Icings: "
+            android:textSize="8pt"
+            android:padding="10dp"></TextView>
+
+        <Spinner
+            android:id="@+id/icingSpinnerWidget"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:entries="@array/icinglist"></Spinner>
+
+        <TextView
+            android:id="@+id/flavorSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flavors: "
+            android:textSize="8pt"
+            android:padding="10dp"></TextView>
+
+        <Spinner
+            android:id="@+id/flavorSpinnerWidget"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:entries="@array/flavorlist"></Spinner>
+
+        <TextView
+            android:id="@+id/layers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Tiers: "
+            android:textSize="8pt"
+            android:padding="10dp"></TextView>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/tierRadioGroup">
+
+            <RadioButton
+                android:id="@+id/tier1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/tier2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/tier3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:onClick="onRadioButtonClicked" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/cakeSizeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cake Sizes: "
+            android:textSize="8pt"
+            android:padding="10dp"></TextView>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/sizesRadioGroup">
+
+            <RadioButton
+                android:id="@+id/size1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8inch round"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/size2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 inch round"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/size3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/4 sheet"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/size4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/2 sheet"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/size5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="full sheet"
+                android:onClick="onRadioButtonClicked" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/descrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other Descriptions: "
+            android:textSize="8pt"
+            android:padding="10dp"></TextView>
+
+        <EditText
+            android:id="@+id/EditTextDescriptionBody"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:layout_width="fill_parent"></EditText>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="8pt"
+            android:padding="10dp" />
+
+    </LinearLayout>
+</ScrollView>
